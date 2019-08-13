@@ -339,4 +339,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /BookingCapchaGenerator/res
-/BookingCapchaGenerator.sln
+*.sln
+*.pyproj

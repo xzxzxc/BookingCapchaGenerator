@@ -21,7 +21,8 @@ for i in range(0, items_count):
         sleep(0.25)
         audio = driver.find_element_by_css_selector('audio > source.wav')
         audioUrl = audio.get_attribute("src")
-        urlretrieve(imgUrl, "res/{i}_{j}.wav".format(i=i, j=j))
+        driver.na.to(audioUrl)
+        # urlretrieve(imgUrl, "res/{i}_{j}.wav".format(i=i, j=j))
     
 driver.close()
     
