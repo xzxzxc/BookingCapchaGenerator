@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>75e13cac-512f-4182-8604-e0e22d049bb0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>booking\booking\spiders\booking_spider.py</StartupFile>
+    <StartupFile>crowler.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
