@@ -22,13 +22,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BookingCapchaGenerator.py" />
-    <Compile Include="booking\booking\items.py" />
-    <Compile Include="booking\booking\middlewares.py" />
-    <Compile Include="booking\booking\pipelines.py" />
-    <Compile Include="booking\booking\settings.py" />
-    <Compile Include="booking\booking\spiders\__init__.py" />
-    <Compile Include="booking\booking\__init__.py" />
-    <Compile Include="booking\booking\spiders\booking_spider.py" />
     <Compile Include="crowler.py">
       <SubType>Code</SubType>
     </Compile>
@@ -37,16 +30,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="booking\scrapy.cfg" />
     <Content Include="NEON GLOW.otf" />
     <Content Include="requirements.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="booking\" />
-    <Folder Include="booking\booking\" />
-    <Folder Include="booking\booking\spiders\" />
-    <Folder Include="booking\booking\spiders\__pycache__\" />
-    <Folder Include="booking\booking\__pycache__\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

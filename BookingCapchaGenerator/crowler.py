@@ -7,8 +7,8 @@ startUrl = 'https://booking.uz.gov.ua/en/?from=2200001&to=2218000&date=2019-08-1
 
 driver = webdriver.Chrome()
 
-items_count = 2
-audios_count = 3
+items_count = 500
+audios_count = 10
 user_agent = driver.execute_script("return navigator.userAgent;")
 
 driver.get(startUrl)
@@ -29,7 +29,8 @@ def download(url, save_path, cookies):
     opener.addheaders.append(('Sec-Fetch-Site', 'same-origin'))
     r = opener.open(url)
     content = r.read()
-    open(save_path, 'wb').write(content)
+    with open(save_path, 'wb') as out_file:
+        out_file.write(content)
 
 def save_image(element, save_path):
     # in case the image isn't isn't in the view yet
@@ -41,17 +42,14 @@ def save_image(element, save_path):
     # uses PIL library to open image in memory
 
     image = Image.open(save_path)
-    left = location['x']
-    top = location['y']
-    right = location['x'] + size['width']
-    bottom = location['y'] + size['height']
-    image = image.crop((left, top, right, bottom))  # defines crop points
+    points = (location['x'], location['y'], location['x'] + size['width'], location['y'] + size['height'])
+    image = image.crop(points)  # defines crop points
     image.save(save_path, 'png')  # saves new cropped image
 
 for i in range(0, items_count):
-    driver
+    sleep(0.5)
     img = driver.find_element_by_css_selector('div.input > img')
-    save_image(img, "res/{i}.gif".format(i=i))
+    save_image(img, "res/{i}.png".format(i=i))
 
     audio_button = driver.find_element_by_css_selector('button.listen')
 
