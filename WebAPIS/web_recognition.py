@@ -15,12 +15,12 @@ r = sr.Recognizer()
 audio_dir = Path('../BookingCapchaGenerator/res/')
 
 # setup your path to sox here:
-path_to_sox = '/usr/local/bin/sox'
-if not Path.exists(Path(path_to_sox)):
+SOX_PATH = '/usr/local/bin/sox'
+if not Path.exists(Path(SOX_PATH)):
     print('install sox or setup path to sox properly')
     sys.exit(1)
 
-command = path_to_sox + ' {} -r 44100 {}'
+command = SOX_PATH + ' {} -r 44100 {}'
 
 audio_path = audio_dir / '0_8.wav'
 sox_out_path = str(audio_path).replace('.wav', '_sox.wav')
