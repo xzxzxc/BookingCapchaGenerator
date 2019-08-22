@@ -25,6 +25,16 @@
     <Compile Include="crowler.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="speech_commands\callbacks.py" />
+    <Compile Include="speech_commands\classes.py" />
+    <Compile Include="speech_commands\download.py" />
+    <Compile Include="speech_commands\export\convert_keras_lite.py" />
+    <Compile Include="speech_commands\export\convert_keras_to_quantized.py" />
+    <Compile Include="speech_commands\export\__init__.py" />
+    <Compile Include="speech_commands\generator.py" />
+    <Compile Include="speech_commands\model.py" />
+    <Compile Include="speech_commands\train.py" />
+    <Compile Include="speech_commands\utils.py" />
     <Compile Include="tests.py">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +42,14 @@
   <ItemGroup>
     <Content Include="NEON GLOW.otf" />
     <Content Include="requirements.txt" />
+    <Content Include="speech_commands\.gitignore" />
+    <Content Include="speech_commands\export\convert_tensorflow_lite.sh" />
+    <Content Include="speech_commands\README.md" />
+    <Content Include="speech_commands\requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="speech_commands\" />
+    <Folder Include="speech_commands\export\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
