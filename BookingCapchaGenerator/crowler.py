@@ -56,9 +56,9 @@ for i in range(0, items_count):
     for j in range(0, audios_count):
         audio_button.click()
         sleep(0.25)
-        audio = driver.find_element_by_css_selector('audio > source.ogg')
+        audio = driver.find_element_by_css_selector('audio > source.wav')
         audioUrl = audio.get_attribute("src")
-        download(audioUrl, "res/{i}_{j}.ogg".format(i=i, j=j), cookies)
+        download(audioUrl, "res/{i}_{j}.wav".format(i=i, j=j), cookies)
 
     reload_btn = driver.find_element_by_css_selector('button.reload')
     reload_btn.click()
