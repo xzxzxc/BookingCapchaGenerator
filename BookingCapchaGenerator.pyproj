@@ -21,6 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AudioPreproc\audio.py" />
+    <Compile Include="AudioPreproc\peakfinder.py" />
     <Compile Include="BookingCapchaGenerator.py" />
     <Compile Include="crowler.py">
       <SubType>Code</SubType>
@@ -38,18 +40,26 @@
     <Compile Include="tests.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WebAPIS\homophone.py" />
+    <Compile Include="WebAPIS\web_recognition.py" />
+    <Compile Include="WebAPIS\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AudioPreproc\README.md" />
     <Content Include="NEON GLOW.otf" />
+    <Content Include="README.md" />
     <Content Include="requirements.txt" />
     <Content Include="speech_commands\.gitignore" />
     <Content Include="speech_commands\export\convert_tensorflow_lite.sh" />
     <Content Include="speech_commands\README.md" />
     <Content Include="speech_commands\requirements.txt" />
+    <Content Include="WebAPIS\requirements.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AudioPreproc\" />
     <Folder Include="speech_commands\" />
     <Folder Include="speech_commands\export\" />
+    <Folder Include="WebAPIS\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
